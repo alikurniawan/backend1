@@ -4,6 +4,7 @@ const fs = require("fs");
 
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
+    console.log(res.url);
     res.writeHead(200, { "content-type": "text/html" });
     // res.write("<h1>OK Youre In !!</h1>");
     const homePageHTML = fs.readFileSync("apps.html");
